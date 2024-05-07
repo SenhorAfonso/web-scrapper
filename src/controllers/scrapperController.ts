@@ -1,12 +1,14 @@
 import { Request, Response  } from 'express';
+import scrapperService from '../services/scrapperService';
 
 class scrapperController {
 
-  static fetchAmazon(
+  static async fetchAmazon(
     req: Request,
     res: Response
   ) {
-    const result: string = 'fetchAmazon';
+    const result = await scrapperService.fetch(req.query);
+
     res.status(200).json({ result });
   }
 
