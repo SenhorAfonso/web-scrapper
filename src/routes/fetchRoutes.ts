@@ -3,6 +3,6 @@ import scrapperController from '../controllers/scrapperController';
 
 const fetchRouter = Router();
 
-fetchRouter.get('/fetch', scrapperController.fetchAmazon);
+fetchRouter.get('/scrape', scrapperController.fetchAmazon);
 
 export default fetchRouter;

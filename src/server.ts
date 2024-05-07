@@ -10,7 +10,7 @@ class Server {
   }
 
   private middlewares() {
-    this.server.use('/api/v1', fetchRouter);
+    this.server.use('/api', fetchRouter);
   }
 
 }
