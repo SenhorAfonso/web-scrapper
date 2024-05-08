@@ -1,4 +1,5 @@
 import express from 'express';
+import fetchRouter from './routes/fetchRoutes';
 
 class Server {
   server: express.Application;
@@ -9,6 +10,7 @@ class Server {
   }
 
   private middlewares() {
+    this.server.use('/api', fetchRouter);
   }
 
 }
